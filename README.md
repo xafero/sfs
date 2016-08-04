@@ -1,2 +1,2 @@
 # sfs
-Simple file server
+Simple File Server
