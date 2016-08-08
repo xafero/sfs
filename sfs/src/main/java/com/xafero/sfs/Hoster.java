@@ -12,7 +12,11 @@ public class Hoster implements Runnable, Closeable {
     private final WebServer web;
 
     public Hoster(File source, IPlugin... plugins) {
-        this.web = new WebServer("localhost", 9999, source, plugins);
+        this("localhost", 9999, source, plugins);
+    }
+    
+    public Hoster(String host, int port, File source, IPlugin... plugins) {
+        this.web = new WebServer(host, port, source, plugins);
     }
 
     public URI getEndpoint() {
